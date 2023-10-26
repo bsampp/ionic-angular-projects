@@ -30,14 +30,14 @@ export class HomePage {
     this.limparVisor();
   }
 
-
-
+  
+  
   calcular(){
     this.valor2 = +this.visor
     switch(this.operacao){
       case 0: {
         this.visor = "" + (this.valor1 + this.valor2);
-        console.log(this.visor)
+        this.valor1 = +this.visor;
         break;
       }
       case 1: {
@@ -55,8 +55,16 @@ export class HomePage {
         console.log(this.visor)
         break;
       }
-
     }
+  }
+
+  porcentagem() {
+    this.visor = (parseFloat(this.visor) / 100).toString();
+  }
+  
+
+  inverterSinal(){
+    this.visor = "" + (parseFloat(this.visor) * -1);
   }
 
   limparVisor(){

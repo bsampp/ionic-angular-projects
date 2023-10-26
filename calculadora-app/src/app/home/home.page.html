@@ -11,10 +11,10 @@
       <ion-fab-button class="operacao2" (click)="limparVisor()">
         AC
       </ion-fab-button>
-      <ion-fab-button class="operacao2" >
+      <ion-fab-button class="operacao2" (click)="inverterSinal()">
        +/-
       </ion-fab-button>
-      <ion-fab-button class="operacao2">
+      <ion-fab-button class="operacao2"(click)="porcentagem()">
        %
       </ion-fab-button>
       <ion-fab-button class="operacao" (click)="adicionarOperacao(3)">
@@ -67,7 +67,7 @@
       <ion-fab-button id="zero" (click)="adicionarNumero('0')">
         0
        </ion-fab-button>
-       <ion-fab-button>
+       <ion-fab-button (click)="adicionarNumero('.')">
         ,
        </ion-fab-button>
        <ion-fab-button class="operacao" (click)="calcular()">
