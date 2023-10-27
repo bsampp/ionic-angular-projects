@@ -17,7 +17,7 @@ export class FilmesDetalhesPage implements OnInit {
     this.omdbApi.getById(id).subscribe(result => {this.info=result});
   }
 
-  opeUrl(){
+  openUrl(){
     window.open(this.info.Website, '_blank');
   }
 
