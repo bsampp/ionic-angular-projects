@@ -16,7 +16,7 @@ game = 'game'
 
 export class OmdbapiService {
   url = 'http://www.omdbapi.com';
-  apiKey ='e78275ff';
+  apiKey ='39d8254f';
 
   constructor(private http: HttpClient) { }
 

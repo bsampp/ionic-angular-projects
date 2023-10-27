@@ -9,7 +9,7 @@
 
   <ion-item>
     <ion-label>Seleciona o Tipo</ion-label>
-    <ion-select [(ngModel)]="type" (ionChange)="search()">Tudo
+    <ion-select [(ngModel)]="type" (ionChange)="search()">
     <ion-select-option value="">Tudo</ion-select-option>
     <ion-select-option value="movie">Filmes</ion-select-option>
     <ion-select-option value="series">Séries</ion-select-option>
@@ -22,7 +22,7 @@
     <ion-item button *ngFor="let item of (result | async)"
     [routerLink]="['/','filmes-detalhes', item.imdbID]">
     <ion-avatar slot="start">
-      <img [src]="item.poster" *ngIf="item.Poster != 'N/A'">
+      <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
     </ion-avatar>
     <ion-label text-wrap>
       <h3>{{item.Title}}</h3> - {{item.Year}}
